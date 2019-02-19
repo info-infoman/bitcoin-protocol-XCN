@@ -54,6 +54,7 @@ exports.ipAddress = (function () {
 })()
 
 exports.peerAddress = struct([
+  { name: 'time', type: struct.UInt32LE },
   { name: 'services', type: exports.buffer8 },
   { name: 'address', type: exports.ipAddress },
   { name: 'port', type: struct.UInt16BE }
